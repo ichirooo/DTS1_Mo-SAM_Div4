@@ -1,0 +1,38 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion '25.0.2'
+    defaultConfig {
+        applicationId 'co.id.datascrip.mo_sam_div4_dts1'
+        minSdkVersion 18
+        targetSdkVersion 25
+        versionCode 10
+        versionName '2.0'
+        multiDexEnabled true
+    }
+    packagingOptions {
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/NOTICE'
+    }
+    productFlavors {}
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+        }
+    }
+}
+dependencies {
+    compile 'com.android.support:support-v4:25.1.0'
+    compile 'com.android.support:appcompat-v7:25.1.0'
+    compile 'com.google.android.gms:play-services:8.4.0'
+    compile 'com.squareup.okhttp3:logging-interceptor:3.2.0'
+    compile files('libs/retrofit-2.0.2.jar')
+    compile files('libs/gson-2.6.2.jar')
+    compile project(':tedpermission')
+    compile 'com.github.bumptech.glide:glide:3.7.0'
+    compile 'com.android.support:multidex:1.0.1'
+    compile 'com.android.support:design:25.1.0'
+}

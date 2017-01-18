@@ -1,0 +1,35 @@
+{
+  "project_info": {
+    "project_number": "979051830382",
+    "project_id": "mosam-dts1"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:979051830382:android:4da6ab7619324a36",
+        "android_client_info": {
+          "package_name": "co.id.datascrip.mo_sam_div4_dts1"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA5ElTCPuxsKL7W5e980R94lWoDDUJ3Uqk"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 1
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

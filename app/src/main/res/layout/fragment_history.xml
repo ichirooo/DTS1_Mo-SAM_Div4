@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <co.id.datascrip.mo_sam_div4_dts1.custom.RobotoCalendarView
+        android:id="@+id/calendar_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@android:color/background_dark" />
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/fragment_history_swipe_refresh_listview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ListView
+            android:id="@+id/fragment_history_listview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="@color/info_cirle"
+            android:dividerHeight="1px" />
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+    <co.id.datascrip.mo_sam_div4_dts1.font.RobotoTextView
+        android:id="@+id/tx_version"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="@android:color/black"
+        android:gravity="center_vertical|center_horizontal"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp"
+        android:textColor="@android:color/white"
+        android:textSize="16sp"
+        android:visibility="gone"
+        custom:font="roboto_slab_bold" />
+
+</LinearLayout>

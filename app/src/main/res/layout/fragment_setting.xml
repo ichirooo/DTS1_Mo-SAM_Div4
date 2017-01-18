@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="5dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="5dp">
+
+        <co.id.datascrip.mo_sam_div4_dts1.font.RobotoTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Default "
+            android:textSize="18sp"
+            custom:font="roboto_slab_bold" />
+
+        <View
+            android:layout_width="0dip"
+            android:layout_height="2dp"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:background="@color/black" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+
+        <co.id.datascrip.mo_sam_div4_dts1.font.RobotoTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="Default Term \nof Payment"
+            android:textSize="16sp" />
+
+        <View
+            android:layout_width="0dip"
+            android:layout_height="1dp"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1" />
+
+        <Spinner
+            android:id="@+id/setting_sp_terms"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        android:padding="5dp">
+
+        <co.id.datascrip.mo_sam_div4_dts1.font.RobotoTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Backup &amp; Restore "
+            android:textSize="18sp"
+            custom:font="roboto_slab_bold" />
+
+        <View
+            android:layout_width="0dip"
+            android:layout_height="2dp"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:background="@color/black" />
+
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/setting_listview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <View
+        android:layout_width="0dip"
+        android:layout_height="2dp"
+        android:layout_gravity="center_vertical"
+        android:layout_weight="1"
+        android:background="@color/black" />
+
+</LinearLayout>

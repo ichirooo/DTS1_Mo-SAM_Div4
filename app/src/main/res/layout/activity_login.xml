@@ -1,0 +1,58 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/holo_blue_dark"
+    android:orientation="vertical"
+    android:padding="10dp"
+    tools:context=".activity.Login_Activity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:background="@drawable/bg_light"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <co.id.datascrip.mo_sam_div4_dts1.font.RobotoEditText
+            android:id="@+id/username"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/custom_edit_text"
+            android:hint="username"
+            android:inputType="textCapCharacters"
+            android:singleLine="true"
+            custom:font="trebuchet_regular" />
+
+        <co.id.datascrip.mo_sam_div4_dts1.font.RobotoEditText
+            android:id="@+id/password"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/custom_edit_text"
+            android:hint="password"
+            android:inputType="textPassword"
+            android:singleLine="true"
+            custom:font="trebuchet_regular" />
+
+        <co.id.datascrip.mo_sam_div4_dts1.font.RobotoButton
+            android:id="@+id/btLogin"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Login"
+            custom:font="trebuchet_bold" />
+    </LinearLayout>
+
+    <co.id.datascrip.mo_sam_div4_dts1.font.RobotoTextView
+        android:id="@+id/txtVersion"
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1"
+        android:gravity="bottom"
+        android:textColor="#ffffffff"
+        custom:font="trebuchet_italic" />
+
+</LinearLayout>

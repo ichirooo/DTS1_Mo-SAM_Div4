@@ -1,0 +1,135 @@
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include layout="@layout/toolbar" />
+
+        <FrameLayout
+            android:id="@+id/content_frame"
+            android:layout_width="match_parent"
+            android:layout_height="0dip"
+            android:layout_weight="1" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/black"
+            android:orientation="vertical"
+            android:padding="5dp">
+
+            <co.id.datascrip.mo_sam_div4_dts1.font.RobotoTextView
+                android:id="@+id/main_tx_version"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textColor="@android:color/white"
+                android:textSize="14dp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- YOUR DRAWER -->
+    <LinearLayout
+        android:id="@+id/drawer_view"
+        android:layout_width="240dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="@drawable/back_drawer"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/linear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="horizontal"
+            android:padding="5dp">
+
+            <co.id.datascrip.mo_sam_div4_dts1.custom.CircularImageView
+                android:id="@+id/imgP"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:src="@drawable/ic_action_person" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:paddingLeft="5dp">
+
+                <co.id.datascrip.mo_sam_div4_dts1.font.RobotoTextView
+                    android:id="@+id/username"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:gravity="bottom"
+                    android:paddingTop="5dp"
+                    android:text="BNY"
+                    android:textColor="@android:color/white"
+                    android:textSize="20sp"
+                    custom:font="trebuchet_bold" />
+
+                <co.id.datascrip.mo_sam_div4_dts1.font.RobotoTextView
+                    android:id="@+id/fullname"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:gravity="top"
+                    android:text="Benny Aziz Setiawan"
+                    android:textColor="@android:color/white"
+                    android:textSize="16sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="5dp" />
+
+        <!-- Use any Views you like -->
+
+        <ListView
+            android:id="@+id/left_drawer"
+            android:layout_width="match_parent"
+            android:layout_height="0dip"
+            android:layout_weight="1"
+            android:background="#ffffff"
+            android:choiceMode="singleChoice"
+            android:divider="@android:color/transparent"
+            android:dividerHeight="1dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <co.id.datascrip.mo_sam_div4_dts1.font.RobotoTextView
+                android:id="@+id/main_txversion"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="DTS1"
+                android:textColor="@android:color/white"
+                android:textSize="18dp" />
+
+            <co.id.datascrip.mo_sam_div4_dts1.font.RobotoButton
+                android:id="@+id/btLogout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@drawable/button_logout"
+                android:gravity="center" />
+        </LinearLayout>
+    </LinearLayout>
+
+</android.support.v4.widget.DrawerLayout>

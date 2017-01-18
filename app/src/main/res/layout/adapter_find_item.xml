@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/info_cirle" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="5dp"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp">
+
+        <co.id.datascrip.mo_sam_div4_dts1.font.RobotoTextView
+            android:id="@+id/search_item_code"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:text="Item Code"
+            android:textSize="16sp"
+            custom:font="roboto_slab_bold" />
+
+        <co.id.datascrip.mo_sam_div4_dts1.font.RobotoTextView
+            android:id="@+id/search_item_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="Item Name"
+            android:textSize="16sp"
+            custom:font="trebuchet_regular" />
+    </LinearLayout>
+</LinearLayout>

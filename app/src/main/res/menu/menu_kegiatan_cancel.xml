@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/edit"
+        android:title="View Kegiatan"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/order"
+        android:title="View Order"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/hasil"
+        android:title="Result"
+        app:showAsAction="ifRoom" />
+</menu>

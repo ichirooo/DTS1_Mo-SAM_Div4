@@ -1,0 +1,15 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.gun0912.tedpermission">
+
+    <application>
+
+        <activity
+            android:name=".TedPermissionActivity"
+            android:theme="@style/Theme.Transparent"
+
+            />
+
+
+    </application>
+
+</manifest>
