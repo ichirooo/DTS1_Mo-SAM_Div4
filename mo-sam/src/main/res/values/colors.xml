@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="colorAccents">#309ced</color>
+    <color name="colorAccent">#309ced</color>
+    <color name="colorPrimaryDark">#1883d2</color>
+
+    <color name="DARK">#c30b0b0b</color>
+    <color name="WHITE">#fff</color>
+    <color name="WHITE_DARK">#AAffffff</color>
+    <!-- General -->
+    <color name="alert_circle">#CC0000</color>
+    <color name="confirm_circle">#669900</color>
+    <color name="info_cirle">#33b5e5</color>
+    <color name="silver">#C0C0C0</color>
+    <color name="black">#3b4144</color>
+    <color name="jml_order">#ff0000FF</color>
+    <color name="holiday">#ffff0000</color>
+    <color name="calendarBackgroundColor">#FFFFFF</color>
+
+    <color name="log_admin_background">#a4cdf4</color>
+    <color name="light_blue">#a4cdf4</color>
+    <color name="dark_blue">#376daf</color>
+    <color name="light_green">#89d696</color>
+    <color name="dark_green">#32ba46</color>
+    <color name="light_red">#e67878</color>
+    <color name="dark_red">#d21c1c</color>
+    <color name="dark_red_light">#dfa62e2e</color>
+    <color name="log_bex_background">#669900</color>
+
+    <!-- Fonts -->
+    <color name="monthTitleColor">#161d20</color>
+    <color name="dayOfWeekColor">#161d20</color>
+    <color name="dayOfMonthColor">#808080</color>
+    <color name="currentDayOfMonthColor">#33b5e5</color>
+    <color name="currentDayOfMonthSelectorColor">#33b5e5</color>
+    <color name="black_overlay">#66000000</color>
+
+    <color name="light_gray">#fff5f5f5</color>
+
+    <color name="colorLightYellow">#ead55a</color>
+    <color name="colorButtonBlue">#2196f3</color>
+    <color name="colorButtonGreen">#17af59</color>
+
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="colorDark">#f05b5b5b</color>
+    <color name="colorSemiDark">#db8f8f8f</color>
+    <color name="colorGreen">#15b956</color>
+    <color name="colorYellow">#fae96b</color>
+    <color name="colorBlue">#2d59fa</color>
+    <color name="colorRed">#af3024</color>
+
+    <!-- selector !-->
+    <color name="button_selector_border">#FFFFFF</color>
+    <color name="button_selector_pressed">#33b5e5</color>
+    <color name="button_selector_default">#0e4991</color>
+
+    <color name="button_location_selector_default">#2196f3</color>
+    <color name="button_location_selector_pressed">#4433b5e5</color>
+
+    <color name="edittext_selector_border_default">#376daf</color>
+    <color name="edittext_selector_border_pressed">#f54dc25e</color>
+    <color name="edittext_selector_border_disabled">#eb1b4e64</color>
+    <color name="edittext_selector_default">#FFFFFF</color>
+    <color name="edittext_selector_pressed">#FFFFFF</color>
+    <color name="edittext_selector_disabled">#efeff1</color>
+
+    <color name="buttonBackgroundPressed">#e3488950</color>
+    <color name="buttonBackgroundDefault">#a824ae36</color>
+    <color name="buttonCheckOutPressed">#bd9e2828</color>
+    <color name="buttonCheckOutDefault">#c3f4352f</color>
+    <color name="colorCanceled">#b12626</color>
+</resources>

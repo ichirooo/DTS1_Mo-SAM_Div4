@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layout_bg"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="end"
+    android:orientation="vertical"
+    android:padding="3dp">
+
+    <LinearLayout
+        android:id="@+id/al_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/log_admin_background"
+        android:orientation="vertical"
+        android:padding="5dp">
+
+        <com.salamander.mo_sam_div4_dts1.font.RobotoTextView
+            android:id="@+id/al_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="2dp"
+            android:gravity="start"
+            android:text="Tanggal"
+            android:textSize="11sp"
+            custom:fonts="trebuchet_italic" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/black_overlay" />
+
+        <com.salamander.mo_sam_div4_dts1.font.RobotoTextView
+            android:id="@+id/al_note"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="5dp"
+            android:gravity="start"
+            android:text="Notes"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+
+</LinearLayout>

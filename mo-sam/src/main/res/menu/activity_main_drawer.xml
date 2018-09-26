@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:icon="@drawable/ic_date_range_grey_700_24dp"
+        android:title="@string/menu_main">
+        <menu>
+            <item
+                android:id="@+id/nav_home"
+                android:icon="@drawable/ic_home_grey_700_24dp"
+                android:title="@string/menu_home" />
+        </menu>
+    </item>
+
+    <item
+        android:icon="@drawable/ic_date_range_grey_700_24dp"
+        android:title="@string/menu_data">
+        <menu>
+            <item
+                android:id="@+id/nav_history_kegiatan"
+                android:icon="@drawable/ic_date_range_grey_700_24dp"
+                android:title="@string/menu_history_kegiatan" />
+            <item
+                android:id="@+id/nav_customer"
+                android:icon="@drawable/ic_customer_ind_grey_700_24dp"
+                android:title="@string/menu_customer"
+                android:visible="false" />
+        </menu>
+    </item>
+
+    <item android:title="@string/menu_option">
+        <menu>
+            <item
+                android:id="@+id/nav_setting"
+                android:icon="@drawable/ic_settings_grey_700_24dp"
+                android:title="@string/menu_setting" />
+            <item
+                android:id="@+id/nav_logout"
+                android:icon="@drawable/ic_exit_to_app_grey_700_24dp"
+                android:title="@string/menu_logout" />
+        </menu>
+    </item>
+</menu>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    android:background="@drawable/custom_progress_dialog"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+    <com.salamander.mo_sam_div4_dts1.font.RobotoTextView
+        android:id="@+id/custom_progress_dialog_message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Uploading..."
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        custom:fonts="trebuchet_bold" />
+
+    <ProgressBar
+        android:id="@+id/custom_progress_dialog_progressbar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:progress="50" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal">
+
+        <com.salamander.mo_sam_div4_dts1.font.RobotoTextView
+            android:id="@+id/custom_progress_dialog_tx_persen"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="left"
+            android:text="100%" />
+
+        <com.salamander.mo_sam_div4_dts1.font.RobotoTextView
+            android:id="@+id/custom_progress_dialog_tx_size"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="right"
+            android:text="0/100" />
+
+    </LinearLayout>
+
+    <com.salamander.mo_sam_div4_dts1.font.RobotoButton
+        android:id="@+id/custom_progress_dialog_bt_cancel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Cancel"
+        android:textSize="18sp"
+        custom:fonts="trebuchet_bold" />
+
+</LinearLayout>

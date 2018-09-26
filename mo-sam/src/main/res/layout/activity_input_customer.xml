@@ -1,0 +1,346 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/silver"
+    android:orientation="vertical"
+    tools:context=".activity.customer.Input_Customer_Activity">
+
+    <include layout="@layout/toolbar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1"
+        android:paddingEnd="10dp"
+        android:paddingStart="5dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_5dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="3dp"
+                    android:background="@android:color/transparent"
+                    android:gravity="top"
+                    android:text="@string/mandatory_symbol"
+                    android:textColor="@color/dark_red"
+                    android:textSize="18sp" />
+
+                <com.salamander.mo_sam_div4_dts1.font.RobotoEditText
+                    android:id="@+id/tx_customer_code"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edittext_box_bg_no_margin"
+                    android:focusable="false"
+                    android:hint="Customer Code"
+                    android:padding="@dimen/dimen_8dp"
+                    android:singleLine="true"
+                    custom:fonts="roboto_slab_bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_5dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="3dp"
+                    android:background="@android:color/transparent"
+                    android:gravity="top"
+                    android:text="@string/mandatory_symbol"
+                    android:textColor="@color/dark_red"
+                    android:textSize="18sp" />
+
+                <com.salamander.mo_sam_div4_dts1.font.RobotoEditText
+                    android:id="@+id/tx_customer_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edittext_box_bg_no_margin"
+                    android:hint="Customer Name"
+                    android:padding="@dimen/dimen_8dp"
+                    android:singleLine="true" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_5dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="3dp"
+                    android:background="@android:color/transparent"
+                    android:gravity="top"
+                    android:text="@string/mandatory_symbol"
+                    android:textColor="@color/dark_red"
+                    android:textSize="18sp"
+                    android:visibility="invisible" />
+
+                <com.salamander.mo_sam_div4_dts1.font.RobotoEditText
+                    android:id="@+id/tx_customer_alias"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edittext_box_bg_no_margin"
+                    android:hint="Customer Alias"
+                    android:padding="@dimen/dimen_8dp"
+                    android:singleLine="true" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_5dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="3dp"
+                    android:background="@android:color/transparent"
+                    android:gravity="top"
+                    android:text="@string/mandatory_symbol"
+                    android:textColor="@color/dark_red"
+                    android:textSize="18sp" />
+
+                <com.salamander.mo_sam_div4_dts1.font.RobotoEditText
+                    android:id="@+id/tx_customer_address_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edittext_box_bg_no_margin"
+                    android:hint="Address"
+                    android:padding="@dimen/dimen_8dp"
+                    android:singleLine="true" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_5dp"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="3dp"
+                    android:background="@android:color/transparent"
+                    android:gravity="top"
+                    android:text="@string/mandatory_symbol"
+                    android:textColor="@color/dark_red"
+                    android:textSize="18sp"
+                    android:visibility="invisible" />
+
+                <com.salamander.mo_sam_div4_dts1.font.RobotoEditText
+                    android:id="@+id/tx_customer_address_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edittext_box_bg_no_margin"
+                    android:hint="Address"
+                    android:padding="@dimen/dimen_8dp"
+                    android:singleLine="true" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_5dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="3dp"
+                    android:background="@android:color/transparent"
+                    android:gravity="top"
+                    android:text="@string/mandatory_symbol"
+                    android:textColor="@color/dark_red"
+                    android:textSize="18sp" />
+
+                <com.salamander.mo_sam_div4_dts1.font.RobotoTextView
+                    android:id="@+id/tx_sp_city"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:background="@drawable/spinner_selector"
+                    android:clickable="true"
+                    android:drawableEnd="@drawable/ic_keyboard_arrow_down_white_18dp"
+                    android:focusable="true"
+                    android:padding="@dimen/dimen_8dp"
+                    android:text="@string/pilih_city_customer"
+                    android:textColor="@color/WHITE"
+                    android:textSize="16sp"
+                    android:visibility="gone" />
+
+                <com.salamander.mo_sam_div4_dts1.font.RobotoEditText
+                    android:id="@+id/tx_city"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edittext_box_bg_no_margin"
+                    android:hint="City"
+                    android:padding="@dimen/dimen_8dp"
+                    android:singleLine="true" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_5dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="3dp"
+                    android:background="@android:color/transparent"
+                    android:gravity="top"
+                    android:text="@string/mandatory_symbol"
+                    android:textColor="@color/dark_red"
+                    android:textSize="18sp" />
+
+                <com.salamander.mo_sam_div4_dts1.font.RobotoEditText
+                    android:id="@+id/tx_customer_contact"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edittext_box_bg_no_margin"
+                    android:hint="Contact Person"
+                    android:padding="@dimen/dimen_8dp"
+                    android:singleLine="true" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_5dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="3dp"
+                    android:background="@android:color/transparent"
+                    android:gravity="top"
+                    android:text="@string/mandatory_symbol"
+                    android:textColor="@color/dark_red"
+                    android:textSize="18sp" />
+
+                <com.salamander.mo_sam_div4_dts1.font.RobotoEditText
+                    android:id="@+id/tx_customer_phone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edittext_box_bg_no_margin"
+                    android:hint="Phone"
+                    android:inputType="phone"
+                    android:padding="@dimen/dimen_8dp"
+                    android:singleLine="true" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_5dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="3dp"
+                    android:background="@android:color/transparent"
+                    android:gravity="top"
+                    android:text="@string/mandatory_symbol"
+                    android:textColor="@color/dark_red"
+                    android:textSize="18sp"
+                    android:visibility="invisible" />
+
+                <com.salamander.mo_sam_div4_dts1.font.RobotoEditText
+                    android:id="@+id/tx_customer_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edittext_box_bg_no_margin"
+                    android:hint="Email"
+                    android:inputType="textEmailAddress"
+                    android:padding="@dimen/dimen_8dp"
+                    android:singleLine="true" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_5dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="3dp"
+                    android:background="@android:color/transparent"
+                    android:gravity="top"
+                    android:text="@string/mandatory_symbol"
+                    android:textColor="@color/dark_red"
+                    android:textSize="18sp"
+                    android:visibility="invisible" />
+
+                <com.salamander.mo_sam_div4_dts1.font.RobotoEditText
+                    android:id="@+id/tx_customer_npwp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edittext_box_bg_no_margin"
+                    android:hint="NPWP"
+                    android:padding="@dimen/dimen_8dp"
+                    android:singleLine="true" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/ll_button_ok_cancel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/bt_ok"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/button_selector"
+            android:minHeight="0dp"
+            android:padding="@dimen/dimen_10dp"
+            android:text="Simpan"
+            android:textColor="@color/WHITE"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/bt_cancel"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/button_selector"
+            android:minHeight="0dp"
+            android:padding="@dimen/dimen_10dp"
+            android:text="Batal"
+            android:textColor="@color/WHITE"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+</LinearLayout>

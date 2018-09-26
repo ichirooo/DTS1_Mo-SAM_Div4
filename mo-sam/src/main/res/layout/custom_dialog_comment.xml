@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/popup_bg"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <android.support.v4.widget.SwipeRefreshLayout
+            android:id="@+id/iia_swipe_container"
+            android:layout_width="match_parent"
+            android:layout_height="0dip"
+            android:layout_weight="1">
+
+            <ListView
+                android:id="@+id/iia_listview_log"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:divider="@android:color/black" />
+
+        </android.support.v4.widget.SwipeRefreshLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="5dp"
+            android:background="@color/info_cirle" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <com.salamander.mo_sam_div4_dts1.font.RobotoEditText
+                android:id="@+id/iia_reply"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_weight="1"
+                android:hint="Write Reply..."
+                android:singleLine="true" />
+
+            <com.salamander.mo_sam_div4_dts1.font.RobotoButton
+                android:id="@+id/iia_btReply"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Reply" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <com.salamander.mo_sam_div4_dts1.font.RobotoButton
+        android:id="@+id/iia_btClose"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/close_image"
+        custom:fonts="roboto_slab_bold" />
+
+</RelativeLayout>

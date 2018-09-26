@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="RobotoTextView">
+        <attr name="fonts" />
+    </declare-styleable>
+    <declare-styleable name="RobotoEditText">
+        <attr name="fonts" />
+    </declare-styleable>
+    <declare-styleable name="RobotoButton">
+        <attr name="fonts" />
+    </declare-styleable>
+    <declare-styleable name="RobotoFonts">
+        <attr name="fonts" format="enum">
+            <enum name="trebuchet_regular" value="0" />
+            <enum name="roboto_thin" value="1" />
+            <enum name="roboto_thin_italic" value="2" />
+            <enum name="roboto_light" value="3" />
+            <enum name="roboto_light_italic" value="4" />
+            <enum name="roboto_regular" value="5" />
+            <enum name="roboto_italic" value="6" />
+            <enum name="roboto_medium" value="7" />
+            <enum name="roboto_medium_italic" value="8" />
+            <enum name="roboto_bold" value="9" />
+            <enum name="roboto_bold_italic" value="10" />
+            <enum name="roboto_black" value="11" />
+            <enum name="roboto_black_italic" value="12" />
+            <enum name="roboto_condensed_light" value="13" />
+            <enum name="roboto_condensed_light_italic" value="14" />
+            <enum name="roboto_condensed_regular" value="15" />
+            <enum name="roboto_condensed_italic" value="16" />
+            <enum name="roboto_condensed_bold" value="17" />
+            <enum name="roboto_condensed_bold_italic" value="18" />
+            <enum name="roboto_slab_thin" value="19" />
+            <enum name="roboto_slab_light" value="20" />
+            <enum name="roboto_slab_regular" value="21" />
+            <enum name="roboto_slab_bold" value="22" />
+            <enum name="trebuchet_bold" value="23" />
+            <enum name="trebuchet_italic" value="24" />
+            <enum name="trebuchet_bold_italic" value="25" />
+        </attr>
+    </declare-styleable>
+
+    <!-- CircularImageView for custom shape -->
+    <declare-styleable name="CircularImageView">
+        <!-- Specifies whether or not to draw a circular border around the image. -->
+        <attr name="border" format="boolean" />
+        <!-- Specifies the color of the border draw around the image. (if enabled) -->
+        <attr name="border_color" format="color" />
+        <!-- Makes the border this pixels wide. (if enabled) -->
+        <attr name="border_width" format="dimension" />
+        <!-- Specifies whether or not to draw a selector on this view upon touch events. -->
+        <attr name="selector" format="boolean" />
+        <!-- Specifies the color of the selector draw on top of the image upon touch events. (if enabled) -->
+        <attr name="selector_color" format="color" />
+        <!-- Specifies the color of the selector stroke drawn around the image upon touch events. Be sure to provide some opacity. (if enabled) -->
+        <attr name="selector_stroke_color" format="color" />
+        <!-- Makes the selector stroke drawn around the image upon touch events this pixels wide. (if enabled) -->
+        <attr name="selector_stroke_width" format="dimension" />
+        <!-- Specifies whether or not to draw a shadow around your circular image. -->
+        <attr name="shadow" format="boolean" />
+    </declare-styleable>
+    <declare-styleable name="CustomCircularImageViewTheme">
+        <attr name="circularImageViewStyle" format="reference" />
+    </declare-styleable>
+    <declare-styleable name="ButtonBarContainerTheme">
+        <attr name="metaButtonBarStyle" format="reference" />
+        <attr name="metaButtonBarButtonStyle" format="reference" />
+    </declare-styleable>
+    <declare-styleable name="NiceSpinner">
+        <attr name="arrowTint" format="color" />
+        <attr name="hideArrow" format="boolean" />
+        <attr name="backgroundSelector" format="integer" />
+        <attr name="textTint" format="color" />
+    </declare-styleable>
+</resources>

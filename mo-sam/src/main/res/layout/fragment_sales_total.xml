@@ -1,0 +1,259 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/dimen_20dp"
+            android:paddingEnd="@dimen/dimen_10dp"
+            android:paddingStart="@dimen/dimen_5dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="3dp"
+                    android:gravity="center"
+                    android:text="@string/mandatory_symbol"
+                    android:textColor="@color/buttonCheckOutPressed"
+                    android:textSize="18sp"
+                    android:visibility="invisible" />
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:hint="@string/subtotal_hint">
+
+                    <android.support.design.widget.TextInputEditText
+                        android:id="@+id/tx_subtotal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/edittext_box_bg_margin_top"
+                        android:clickable="false"
+                        android:enabled="false"
+                        android:focusable="false"
+                        android:inputType="numberDecimal"
+                        android:maxLines="1"
+                        android:padding="11dp"
+                        android:textColor="@color/edittext_text_color"
+                        android:textSize="18sp" />
+                </android.support.design.widget.TextInputLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="3dp"
+                    android:gravity="center"
+                    android:text="@string/mandatory_symbol"
+                    android:textColor="@color/buttonCheckOutPressed"
+                    android:textSize="18sp"
+                    android:visibility="invisible" />
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:hint="@string/potongan_hint">
+
+                    <android.support.design.widget.TextInputEditText
+                        android:id="@+id/tx_potongan"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/edittext_box_bg_margin_top"
+                        android:inputType="numberDecimal"
+                        android:maxLines="1"
+                        android:padding="11dp"
+                        android:textColor="@color/edittext_text_color"
+                        android:textSize="18sp" />
+                </android.support.design.widget.TextInputLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="3dp"
+                    android:gravity="center"
+                    android:text="@string/mandatory_symbol"
+                    android:textColor="@color/buttonCheckOutPressed"
+                    android:textSize="18sp"
+                    android:visibility="invisible" />
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:hint="@string/dpp_hint">
+
+                    <android.support.design.widget.TextInputEditText
+                        android:id="@+id/tx_dpp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/edittext_box_bg_margin_top"
+                        android:clickable="false"
+                        android:enabled="false"
+                        android:focusable="false"
+                        android:inputType="numberDecimal"
+                        android:maxLines="1"
+                        android:padding="11dp"
+                        android:textColor="@color/edittext_text_color"
+                        android:textSize="18sp" />
+                </android.support.design.widget.TextInputLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="3dp"
+                    android:gravity="center"
+                    android:text="@string/mandatory_symbol"
+                    android:textColor="@color/buttonCheckOutPressed"
+                    android:textSize="18sp"
+                    android:visibility="invisible" />
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:hint="@string/ppn_hint">
+
+                    <android.support.design.widget.TextInputEditText
+                        android:id="@+id/tx_ppn"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/edittext_box_bg_margin_top"
+                        android:clickable="false"
+                        android:enabled="false"
+                        android:focusable="false"
+                        android:inputType="numberDecimal"
+                        android:maxLines="1"
+                        android:padding="11dp"
+                        android:textColor="@color/edittext_text_color"
+                        android:textSize="18sp" />
+                </android.support.design.widget.TextInputLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="3dp"
+                    android:gravity="center"
+                    android:text="@string/mandatory_symbol"
+                    android:textColor="@color/buttonCheckOutPressed"
+                    android:textSize="18sp"
+                    android:visibility="invisible" />
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:hint="@string/total_bayar_hint">
+
+                    <android.support.design.widget.TextInputEditText
+                        android:id="@+id/tx_total_bayar"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/edittext_box_bg_margin_top"
+                        android:clickable="false"
+                        android:enabled="false"
+                        android:focusable="false"
+                        android:inputType="numberDecimal"
+                        android:maxLines="1"
+                        android:padding="11dp"
+                        android:textColor="@color/edittext_text_color"
+                        android:textSize="18sp" />
+                </android.support.design.widget.TextInputLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_5dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="3dp"
+                    android:gravity="center"
+                    android:text="@string/mandatory_symbol"
+                    android:textColor="@color/buttonCheckOutPressed"
+                    android:textSize="18sp"
+                    android:visibility="invisible" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginEnd="3dp"
+                        android:gravity="center"
+                        android:text="@string/catatan_hint"
+                        android:textSize="12sp" />
+
+                    <EditText
+                        android:id="@+id/tx_notes"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/edittext_box_bg_margin_top"
+                        android:gravity="top"
+                        android:hint="@string/catatan_hint"
+                        android:inputType="textMultiLine"
+                        android:lines="3"
+                        android:maxLines="3"
+                        android:padding="10dp"
+                        android:textColor="@color/edittext_text_color"
+                        android:textSize="18sp" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/bt_submit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:padding="18dp"
+        android:text="@string/kirim_order_hint"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:theme="@style/AppTheme.Button.Green" />
+
+</LinearLayout>

@@ -1,0 +1,18 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.salamander.mo_sam_div4_dts1.MainActivity">
+
+    <item
+        android:id="@+id/edit"
+        android:orderInCategory="100"
+        android:title="@string/action_edit_kegiatan"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/checkin"
+        android:orderInCategory="100"
+        android:title="@string/action_check_in_kegiatan"
+        app:showAsAction="ifRoom" />
+
+</menu>

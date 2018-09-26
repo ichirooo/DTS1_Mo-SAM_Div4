@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:bottom="2dp"
+        android:top="2dp">
+        <selector>
+            <item android:state_focused="true">
+                <shape android:shape="rectangle">
+                    <stroke
+                        android:width="2dp"
+                        android:color="@color/edittext_selector_border_pressed" />
+                    <solid android:color="@color/edittext_selector_default" />
+                    <corners android:radius="@dimen/dimen_5dp" />
+                </shape>
+            </item>
+            <item android:state_pressed="true">
+                <shape android:shape="rectangle">
+                    <stroke
+                        android:width="2dp"
+                        android:color="@color/edittext_selector_border_pressed" />
+                    <solid android:color="@color/edittext_selector_default" />
+                    <corners android:radius="@dimen/dimen_5dp" />
+                </shape>
+            </item>
+            <item android:state_enabled="false">
+                <shape android:shape="rectangle">
+                    <stroke
+                        android:width="2dp"
+                        android:color="@color/edittext_selector_border_disabled" />
+                    <solid android:color="@color/edittext_selector_disabled" />
+                    <corners android:radius="3dp" />
+                </shape>
+            </item>
+            <item>
+                <shape android:shape="rectangle">
+                    <stroke
+                        android:width="2dp"
+                        android:color="@color/edittext_selector_border_default" />
+                    <solid android:color="@color/edittext_selector_default" />
+                    <corners android:radius="3dp" />
+                </shape>
+            </item>
+        </selector>
+    </item>
+</layer-list>

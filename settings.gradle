@@ -1,1 +1,1 @@
-include ':app', ':tedpermission'
+include ':mo-sam', ':tedpermission', ':salamander_base_module', ':salamander_location', ':salamander_network', ':salamander_logger', ':salamander_calendar'

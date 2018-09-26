@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_focused="true">
+        <shape android:shape="rectangle">
+            <stroke android:width="2dp" android:color="@color/dark_green" />
+            <solid android:color="@color/WHITE" />
+            <corners android:bottomLeftRadius="@dimen/dimen_5dp" android:topLeftRadius="@dimen/dimen_5dp" />
+            <padding android:bottom="@dimen/dimen_5dp" android:left="@dimen/dimen_5dp" android:right="@dimen/dimen_5dp" android:top="@dimen/dimen_5dp" />
+        </shape>
+    </item>
+    <item android:state_pressed="true">
+        <shape android:shape="rectangle">
+            <stroke android:width="2dp" android:color="@color/dark_green" />
+            <solid android:color="@color/WHITE" />
+            <corners android:bottomLeftRadius="@dimen/dimen_5dp" android:topLeftRadius="@dimen/dimen_5dp" />
+            <padding android:bottom="@dimen/dimen_5dp" android:left="@dimen/dimen_5dp" android:right="@dimen/dimen_5dp" android:top="@dimen/dimen_5dp" />
+        </shape>
+    </item>
+    <item>
+        <shape android:shape="rectangle">
+            <corners android:bottomLeftRadius="@dimen/dimen_5dp" android:topLeftRadius="@dimen/dimen_5dp" />
+            <stroke android:width="2dp" android:color="@color/dark_blue" />
+            <solid android:color="@color/WHITE" />
+            <padding android:bottom="@dimen/dimen_5dp" android:left="@dimen/dimen_5dp" android:right="@dimen/dimen_5dp" android:top="@dimen/dimen_5dp" />
+        </shape>
+    </item>
+</selector>

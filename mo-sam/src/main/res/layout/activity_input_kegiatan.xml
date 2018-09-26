@@ -1,0 +1,441 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/silver"
+    android:orientation="vertical"
+    tools:context=".activity.Input_Kegiatan_Activity">
+
+    <include layout="@layout/toolbar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:padding="5dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:gravity="bottom"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:text="@string/customer_hint"
+                android:textSize="12sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="3dp"
+                    android:gravity="top"
+                    android:text="@string/mandatory_symbol"
+                    android:textColor="@color/buttonCheckOutPressed"
+                    android:textSize="18sp" />
+
+                <LinearLayout
+                    android:id="@+id/ll_select_customer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edittext_box_bg_no_margin"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/dimen_5dp">
+
+                    <LinearLayout
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/dimen_2dp"
+                        android:layout_marginTop="@dimen/dimen_2dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <com.salamander.mo_sam_div4_dts1.font.RobotoTextView
+                            android:id="@+id/tv_customer_code"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/select_customer_title"
+                            android:textSize="18sp" />
+
+                        <LinearLayout
+                            android:id="@+id/ll_detail_customer"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="5dp"
+                            android:visibility="gone">
+
+                            <com.salamander.mo_sam_div4_dts1.font.RobotoTextView
+                                android:id="@+id/tv_customer_name"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+                            <com.salamander.mo_sam_div4_dts1.font.RobotoTextView
+                                android:id="@+id/tv_customer_address"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textSize="14sp" />
+
+                            <com.salamander.mo_sam_div4_dts1.font.RobotoTextView
+                                android:id="@+id/tv_customer_city"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textSize="14sp" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:contentDescription="@string/select_customer_title"
+                        android:src="@drawable/ic_chevron_right_indigo_a400_18dp" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:text="@string/tipe_kegiatan"
+                android:textSize="12sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="3dp"
+                    android:background="@android:color/transparent"
+                    android:gravity="top"
+                    android:text="@string/mandatory_symbol"
+                    android:textColor="@color/dark_red"
+                    android:textSize="18sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <com.salamander.mo_sam_div4_dts1.font.RobotoTextView
+                        android:id="@+id/tx_sp_tipe_kegiatan"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/spinner_selector"
+                        android:clickable="true"
+                        android:drawableEnd="@drawable/ic_keyboard_arrow_down_white_18dp"
+                        android:focusable="true"
+                        android:padding="10dp"
+                        android:text="@string/pilih_tipe_kegiatan_hint"
+                        android:textColor="@color/WHITE"
+                        android:textSize="16sp" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:text="@string/jenis_kegiatan"
+                android:textSize="12sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="3dp"
+                    android:background="@android:color/transparent"
+                    android:gravity="top"
+                    android:text="@string/mandatory_symbol"
+                    android:textColor="@color/dark_red"
+                    android:textSize="18sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <com.salamander.mo_sam_div4_dts1.font.RobotoTextView
+                        android:id="@+id/tx_sp_jenis_kegiatan"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/spinner_selector"
+                        android:clickable="true"
+                        android:drawableEnd="@drawable/ic_keyboard_arrow_down_white_18dp"
+                        android:focusable="true"
+                        android:padding="10dp"
+                        android:text="@string/pilih_jenis_kegiatan_hint"
+                        android:textColor="@color/WHITE"
+                        android:textSize="16sp" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:text="@string/mulai_kegiatan"
+                android:textSize="12sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="3dp"
+                    android:background="@android:color/transparent"
+                    android:gravity="top"
+                    android:text="@string/mandatory_symbol"
+                    android:textColor="@color/dark_red"
+                    android:textSize="18sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <com.salamander.mo_sam_div4_dts1.font.RobotoTextView
+                        android:id="@+id/tx_dp_tgl_mulai_kegiatan"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/spinner_selector"
+                        android:clickable="true"
+                        android:drawableEnd="@drawable/ic_event_white_18dp"
+                        android:focusable="true"
+                        android:padding="10dp"
+                        android:textColor="@color/WHITE"
+                        android:textSize="16sp" />
+
+                    <com.salamander.mo_sam_div4_dts1.font.RobotoTextView
+                        android:id="@+id/tx_dp_jam_mulai_kegiatan"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dimen_10dp"
+                        android:layout_marginTop="3dp"
+                        android:background="@drawable/spinner_selector"
+                        android:clickable="true"
+                        android:drawableEnd="@drawable/ic_watch_later_white_18dp"
+                        android:drawablePadding="@dimen/dimen_8dp"
+                        android:focusable="true"
+                        android:padding="10dp"
+                        android:textColor="@color/WHITE"
+                        android:textSize="16sp" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:text="@string/selesai_kegiatan"
+                android:textSize="12sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="3dp"
+                    android:background="@android:color/transparent"
+                    android:gravity="top"
+                    android:text="@string/mandatory_symbol"
+                    android:textColor="@color/dark_red"
+                    android:textSize="18sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <com.salamander.mo_sam_div4_dts1.font.RobotoTextView
+                        android:id="@+id/tx_dp_tgl_selesai_kegiatan"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/spinner_selector"
+                        android:clickable="true"
+                        android:drawableEnd="@drawable/ic_event_white_18dp"
+                        android:focusable="true"
+                        android:padding="10dp"
+                        android:textColor="@color/WHITE"
+                        android:textSize="16sp" />
+
+                    <com.salamander.mo_sam_div4_dts1.font.RobotoTextView
+                        android:id="@+id/tx_dp_jam_selesai_kegiatan"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dimen_10dp"
+                        android:layout_marginTop="3dp"
+                        android:background="@drawable/spinner_selector"
+                        android:clickable="true"
+                        android:drawableEnd="@drawable/ic_watch_later_white_18dp"
+                        android:drawablePadding="@dimen/dimen_8dp"
+                        android:focusable="true"
+                        android:padding="10dp"
+                        android:textColor="@color/WHITE"
+                        android:textSize="16sp" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <com.salamander.mo_sam_div4_dts1.font.RobotoTextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:padding="5dp"
+                android:text="Mulai : " />
+
+            <com.salamander.mo_sam_div4_dts1.font.RobotoTextView
+                android:id="@+id/inp_date_start"
+                style="?android:attr/spinnerStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="5" />
+
+            <com.salamander.mo_sam_div4_dts1.font.RobotoTextView
+                android:id="@+id/inp_time_start"
+                style="?android:attr/spinnerStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <com.salamander.mo_sam_div4_dts1.font.RobotoTextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:padding="5dp"
+                android:text="Selesai : " />
+
+            <com.salamander.mo_sam_div4_dts1.font.RobotoTextView
+                android:id="@+id/inp_date_end"
+                style="?android:attr/spinnerStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="5" />
+
+            <com.salamander.mo_sam_div4_dts1.font.RobotoTextView
+                android:id="@+id/inp_time_end"
+                style="?android:attr/spinnerStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3" />
+        </LinearLayout>
+
+        <com.salamander.mo_sam_div4_dts1.font.RobotoEditText
+            android:id="@+id/txtSubject"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:hint="Subject"
+            android:singleLine="true"
+            android:visibility="gone" />
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:hint="@string/subject">
+
+            <EditText
+                android:id="@+id/tx_keterangan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edittext_box_bg_margin_top"
+                android:gravity="top"
+                android:inputType="text"
+                android:nestedScrollingEnabled="true"
+                android:padding="@dimen/dimen_11dp"
+                android:textColor="#000"
+                tools:targetApi="lollipop" />
+        </android.support.design.widget.TextInputLayout>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/bt_simpan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="5dp"
+        android:background="@drawable/button_selector"
+        android:minHeight="0dp"
+        android:padding="@dimen/dimen_10dp"
+        android:text="Simpan Kegiatan"
+        android:textColor="@color/WHITE"
+        android:textSize="16sp" />
+</LinearLayout>
