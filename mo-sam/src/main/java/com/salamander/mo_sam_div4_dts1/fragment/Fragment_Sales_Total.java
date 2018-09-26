@@ -148,7 +148,6 @@ public class Fragment_Sales_Total extends Fragment {
     private void setData() {
         if (context.getSalesHeader().getSubtotal() != 0) {
             tx_subtotal.setText(CurrencyUtils.formatNumber(context.getSalesHeader().getSubtotal()));
-            //tx_potongan.setText("");
             if (context.getSalesHeader().getPotongan() == 0)
                 tx_potongan.setText("");
             else
