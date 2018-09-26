@@ -236,6 +236,15 @@ public class SalesHeader implements Parcelable {
         return SalesLine;
     }
 
+    public int getNextLineNo() {
+        int maxLineNo = 0;
+        for (Item item : getSalesLine()) {
+            if (item.getLineNo() >= maxLineNo)
+                maxLineNo = item.getLineNo();
+        }
+        return maxLineNo + 100;
+    }
+
     public void setSalesLine(ArrayList<Item> sales_line) {
         this.SalesLine = sales_line;
     }

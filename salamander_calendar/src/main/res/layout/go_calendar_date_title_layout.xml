@@ -22,7 +22,7 @@
         android:layout_weight="1"
         android:orientation="vertical">
 
-        <com.datascrip.salamander_calendar.fonts.GoTextView
+        <com.salamander.salamander_calendar.fonts.GoTextView
             android:id="@+id/monthTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -33,7 +33,7 @@
             custom:fontStyle="bold"
             custom:monthTitleColor="@color/monthTitleColor" />
 
-        <com.datascrip.salamander_calendar.fonts.GoTextView
+        <com.salamander.salamander_calendar.fonts.GoTextView
             android:id="@+id/yearTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

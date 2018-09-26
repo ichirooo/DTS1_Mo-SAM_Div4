@@ -14,7 +14,7 @@
         android:textColor="@color/WHITE"
         android:textSize="18sp" />
 
-    <com.datascrip.salamander_calendar.GoCalendarView
+    <com.salamander.salamander_calendar.GoCalendarView
         android:id="@+id/calendar_go"
         android:layout_width="match_parent"
         android:layout_height="400dp" />

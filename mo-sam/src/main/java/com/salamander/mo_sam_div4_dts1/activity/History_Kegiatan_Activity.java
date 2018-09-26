@@ -17,14 +17,12 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.salamander.mo_sam_div4_dts1.R;
-import com.salamander.mo_sam_div4_dts1.adapter.Adapter_List_Kegiatan_New;
+import com.salamander.mo_sam_div4_dts1.adapter.Adapter_List_Kegiatan;
 import com.salamander.mo_sam_div4_dts1.custom.DialogGoCalendarKegiatan;
 import com.salamander.mo_sam_div4_dts1.object.Holiday;
-import com.salamander.mo_sam_div4_dts1.object.Kegiatan;
 import com.salamander.mo_sam_div4_dts1.proses.Proses_Kegiatan;
 import com.salamander.mo_sam_div4_dts1.proses.callback.Callbacks;
 import com.salamander.mo_sam_div4_dts1.sqlite.HolidaySQLite;
-import com.salamander.mo_sam_div4_dts1.sqlite.KegiatanSQLite;
 import com.salamander.salamander_base_module.DateUtils;
 import com.salamander.salamander_base_module.DialogUtils;
 import com.salamander.salamander_base_module.object.Tanggal;
@@ -42,20 +40,16 @@ public class History_Kegiatan_Activity extends ToolbarActivity {
     private TextView tv_tanggal, tx_tidak_ada_kegiatan;
     private LinearLayout ll_tidak_ada_kegiatan;
     private RecyclerView rv_kegiatan;
-    private Adapter_List_Kegiatan_New adapterListKegiatan;
+    private Adapter_List_Kegiatan adapterListKegiatan;
 
-    private KegiatanSQLite kegiatanSQLite;
     private Date selectedDate;
     private DialogGoCalendarKegiatan dialogGoCalendarKegiatan;
-
-    private Kegiatan currentSelected;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_history_kegiatan);
         this.activity = this;
-        kegiatanSQLite = new KegiatanSQLite(this);
         selectedDate = new Date();
         initToolbar(getString(R.string.title_activity_history_kegiatan));
         initView();
@@ -93,7 +87,7 @@ public class History_Kegiatan_Activity extends ToolbarActivity {
     }
 
     private void refreshAdapter() {
-        adapterListKegiatan = new Adapter_List_Kegiatan_New(this, selectedDate);
+        adapterListKegiatan = new Adapter_List_Kegiatan(this, selectedDate);
         rv_kegiatan.setLayoutManager(new LinearLayoutManager(getApplicationContext()));
         rv_kegiatan.setItemAnimator(new DefaultItemAnimator());
         rv_kegiatan.setAdapter(adapterListKegiatan);

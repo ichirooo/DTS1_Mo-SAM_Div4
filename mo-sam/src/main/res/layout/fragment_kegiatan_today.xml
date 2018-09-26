@@ -63,7 +63,7 @@
                 android:layout_weight="1"
                 android:focusable="false"
                 android:visibility="gone"
-                tools:listitem="@layout/adapter_list_kegiatan_old" />
+                tools:listitem="@layout/adapter_list_kegiatan" />
         </LinearLayout>
     </android.support.v4.widget.NestedScrollView>
 

@@ -229,8 +229,10 @@ public class RetrofitResponse {
 
                 int id_server = JSON.getInt(jsonObject, SalesHeader.SALES_HEADER_ID_SERVER);
                 int status_code = JSON.getInt(jsonObject, SalesHeader.SALES_HEADER_STATUS);
-                salesHeader = salesHeaderSQLite.updateID(salesHeader.getIDKegiatan(), salesHeader.getIDServer(), id_server);
-                salesHeader = salesHeaderSQLite.updateStatus(salesHeader.getIDKegiatan(), salesHeader.getIDServer(), status_code);
+                salesHeader.setIDServer(id_server);
+                salesHeader.setStatus(status_code);
+                //salesHeader = salesHeaderSQLite.updateID(salesHeader.getIDKegiatan(), salesHeader.getIDServer(), id_server);
+                //salesHeader = salesHeaderSQLite.updateStatus(salesHeader.getIDKegiatan(), salesHeader.getIDServer(), status_code);
 
                 ArrayList<Item> list_item = new ArrayList<>(salesHeader.getSalesLine());
                 salesHeader.getSalesLine().clear();
@@ -241,6 +243,7 @@ public class RetrofitResponse {
                     int IDServer = JSON.getInt(jsonObjectLine, Item.ITEM_ID_SERVER);
                     int LineNo = JSON.getInt(jsonObjectLine, Item.ITEM_LINE_NO);
                     for (Item item : list_item) {
+                        item.setIDHeader(salesHeader.getIDServer());
                         if (item.getLineNo() == LineNo) {
                             item.setIDServer(IDServer);
                             salesHeader.getSalesLine().add(item);

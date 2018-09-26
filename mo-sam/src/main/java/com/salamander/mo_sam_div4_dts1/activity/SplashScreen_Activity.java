@@ -36,8 +36,8 @@ public class SplashScreen_Activity extends AppCompatActivity {
 
     private static final int REQUEST_OPEN_SETTING = 2000;
     private static final long SPLASH_DURATION = 500; //2 * 1000
-    private static final String[] list_permissions = {Manifest.permission.ACCESS_FINE_LOCATION, Manifest.permission.WRITE_EXTERNAL_STORAGE, Manifest.permission.CAMERA, Manifest.permission.READ_PHONE_STATE};
-    private static final String[] list_permissions_string = {"LOCATION", "STORAGE", "CAMERA", "PHONE"};
+    private static final String[] list_permissions = {Manifest.permission.ACCESS_FINE_LOCATION, Manifest.permission.WRITE_EXTERNAL_STORAGE};
+    private static final String[] list_permissions_string = {"LOCATION", "STORAGE"};
     final String DIALOG_MESSAGE_RATIONALE = "Aplikasi membutuhkan permission : \n[PERMISSIONS]\n\nKlik OK untuk melanjutkan.";
     final String DIALOG_MESSAGE_DENIED = "Aplikasi membutuhkan permission : \n[PERMISSIONS]\n\nKlik tombol di bawah untuk melanjutkan, lalu pilih Permission";
     final String DIALOG_TITLE = "Access Permission Required";
@@ -125,9 +125,7 @@ public class SplashScreen_Activity extends AppCompatActivity {
                 } else {
                     if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
                         if (!shouldShowRequestPermissionRationale(Manifest.permission.ACCESS_FINE_LOCATION) ||
-                                !shouldShowRequestPermissionRationale(Manifest.permission.WRITE_EXTERNAL_STORAGE) ||
-                                !shouldShowRequestPermissionRationale(Manifest.permission.CAMERA) ||
-                                !shouldShowRequestPermissionRationale(Manifest.permission.READ_PHONE_STATE)) {
+                                !shouldShowRequestPermissionRationale(Manifest.permission.WRITE_EXTERNAL_STORAGE)) {
                             showAlertDialog(DIALOG_TITLE, DIALOG_MESSAGE_DENIED.replace("[PERMISSIONS]", getPermissionsDenied()));
                         }
                     }
@@ -138,7 +136,7 @@ public class SplashScreen_Activity extends AppCompatActivity {
             public void onRationaleRequested(Permiso.IOnRationaleProvided callback, String... permissions) {
                 Permiso.getInstance().showRationaleInDialog(DIALOG_TITLE, DIALOG_MESSAGE_RATIONALE.replace("[PERMISSIONS]", getPermissionsDenied()), null, callback);
             }
-        }, Manifest.permission.ACCESS_FINE_LOCATION, Manifest.permission.WRITE_EXTERNAL_STORAGE, Manifest.permission.CAMERA, Manifest.permission.READ_PHONE_STATE);
+        }, Manifest.permission.ACCESS_FINE_LOCATION, Manifest.permission.WRITE_EXTERNAL_STORAGE);
     }
 
     @Override

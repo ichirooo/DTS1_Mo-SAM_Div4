@@ -7,7 +7,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
 
-import com.datascrip.salamander_calendar.GoCalendarView;
 import com.salamander.mo_sam_div4_dts1.App;
 import com.salamander.mo_sam_div4_dts1.Const;
 import com.salamander.mo_sam_div4_dts1.R;
@@ -17,6 +16,7 @@ import com.salamander.mo_sam_div4_dts1.sqlite.HolidaySQLite;
 import com.salamander.mo_sam_div4_dts1.sqlite.KegiatanSQLite;
 import com.salamander.salamander_base_module.DateUtils;
 import com.salamander.salamander_base_module.object.Tanggal;
+import com.salamander.salamander_calendar.GoCalendarView;
 
 import java.util.ArrayList;
 import java.util.Calendar;

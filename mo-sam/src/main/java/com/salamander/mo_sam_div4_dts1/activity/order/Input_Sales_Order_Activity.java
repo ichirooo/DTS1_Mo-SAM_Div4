@@ -47,9 +47,10 @@ public class Input_Sales_Order_Activity extends ToolbarActivity {
         this.kegiatan = getIntent().getParcelableExtra("kegiatan");
         if (kegiatan.getSalesHeader() == null) {
             this.kegiatan.setSalesHeader(new SalesHeader());
-            this.kegiatan.getSalesHeader().setIDServer(new SalesHeaderSQLite(this).getTempID());
-            kegiatan.setSalesperson(App.getUser(this));
         }
+        kegiatan.setSalesperson(App.getUser(this));
+        if (kegiatan.getSalesHeader().getIDServer() == 0)
+            kegiatan.getSalesHeader().setIDServer(new SalesHeaderSQLite(this).getTempID());
         kegiatan.getSalesHeader().setIDKegiatan(kegiatan.getIDServer());
 
         if (Utils.isEmpty(kegiatan.getSalesHeader().getOrderNo()))
@@ -70,7 +71,7 @@ public class Input_Sales_Order_Activity extends ToolbarActivity {
                     if (status.isSuccess()) {
                         if (sales_status == SalesHeader.STATUS_ORDER_OPEN || sales_status == SalesHeader.STATUS_ORDER_ANDROID_EDIT || sales_status == SalesHeader.STATUS_ORDER_COS) {
                             kegiatan.getSalesHeader().setStatus(sales_status);
-                            new SalesHeaderSQLite(context).post(kegiatan.getSalesHeader());
+                            new SalesHeaderSQLite(context).updateStatus(kegiatan.getIDServer(), kegiatan.getSalesHeader().getIDServer(), sales_status);
                             initView();
                         }
                     } else

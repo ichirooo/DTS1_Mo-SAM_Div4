@@ -22,7 +22,7 @@ import android.widget.TextView;
 import com.salamander.mo_sam_div4_dts1.App;
 import com.salamander.mo_sam_div4_dts1.R;
 import com.salamander.mo_sam_div4_dts1.activity.Input_Kegiatan_Activity;
-import com.salamander.mo_sam_div4_dts1.adapter.Adapter_List_Kegiatan_New;
+import com.salamander.mo_sam_div4_dts1.adapter.Adapter_List_Kegiatan;
 import com.salamander.mo_sam_div4_dts1.imagepicker.DefaultCallback;
 import com.salamander.mo_sam_div4_dts1.imagepicker.EasyImage;
 import com.salamander.mo_sam_div4_dts1.object.Kegiatan;
@@ -47,7 +47,7 @@ public class Fragment_Kegiatan_Today extends Fragment {
 
     private Context context;
     private LinearLayout ll_tidak_ada_kegiatan;
-    private Adapter_List_Kegiatan_New adapterListKegiatan;
+    private Adapter_List_Kegiatan adapterListKegiatan;
     private RecyclerView rv_kegiatan;
 
     private Kegiatan currentSelected;
@@ -71,7 +71,7 @@ public class Fragment_Kegiatan_Today extends Fragment {
     }
 
     private void refreshAdapter() {
-        adapterListKegiatan = new Adapter_List_Kegiatan_New(getActivity(), new Date());
+        adapterListKegiatan = new Adapter_List_Kegiatan(getActivity(), new Date());
         assert getActivity() != null;
         rv_kegiatan.setLayoutManager(new LinearLayoutManager(getActivity().getApplicationContext()));
         rv_kegiatan.setItemAnimator(new DefaultItemAnimator());

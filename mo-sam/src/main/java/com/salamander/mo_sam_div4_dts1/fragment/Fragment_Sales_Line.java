@@ -141,6 +141,8 @@ public class Fragment_Sales_Line extends Fragment {
             if (item != null) {
                 item.setOrderNo(context.getSalesHeader().getOrderNo());
                 item.setIDHeader(context.getSalesHeader().getIDServer());
+                if (item.getLineNo() == 0)
+                    item.setLineNo(context.getSalesHeader().getNextLineNo());
             }
             int position = bundle.getInt("position");
 

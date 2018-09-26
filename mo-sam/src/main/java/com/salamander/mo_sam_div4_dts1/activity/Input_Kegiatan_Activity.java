@@ -141,7 +141,7 @@ public class Input_Kegiatan_Activity extends LocationActivity {
         if (kegiatan == null) {
             kegiatan = new Kegiatan();
             Calendar calendar = Calendar.getInstance();
-            calendar.set(calendar.get(Calendar.YEAR), calendar.get(Calendar.MONTH), calendar.get(Calendar.DAY_OF_MONTH), 7, 0, 0);
+            calendar.set(calendar.get(Calendar.YEAR), calendar.get(Calendar.MONTH), calendar.get(Calendar.DAY_OF_MONTH), calendar.get(Calendar.HOUR_OF_DAY), calendar.get(Calendar.MINUTE), 0);
             kegiatan.setStartDate(calendar.getTime());
             kegiatan.setEndDate(calendar.getTime());
             kegiatan.setSalesperson(App.getUser(this));

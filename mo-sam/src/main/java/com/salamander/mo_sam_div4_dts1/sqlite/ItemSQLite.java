@@ -204,10 +204,18 @@ public class ItemSQLite {
         return sos;
     }
 
-    public void deleteFromSalesHeader(int line_id) {
+    public void deleteItem(int line_id) {
         db = dbHelper.getWritableDatabase();
         String query = "DELETE FROM " + ConstSQLite.TABLE_LINE +
                 " WHERE " + Item.ITEM_ID_SERVER + " = " + String.valueOf(line_id);
+        db.execSQL(query);
+        db.close();
+    }
+
+    public void deleteFromSalesHeader(int idHeader) {
+        db = dbHelper.getWritableDatabase();
+        String query = "DELETE FROM " + ConstSQLite.TABLE_LINE +
+                " WHERE " + Item.ITEM_ID_HEADER + " = " + String.valueOf(idHeader);
         db.execSQL(query);
         db.close();
     }

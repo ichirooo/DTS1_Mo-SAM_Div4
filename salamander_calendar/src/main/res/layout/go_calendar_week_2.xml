@@ -16,7 +16,7 @@
         android:padding="5dp"
         android:tag="dayOfMonthContainer8">
 
-        <com.datascrip.salamander_calendar.fonts.GoTextView
+        <com.salamander.salamander_calendar.fonts.GoTextView
             android:id="@+id/dayOfMonthText8"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -46,7 +46,7 @@
                 android:src="@drawable/circle_blue"
                 android:tag="dayOfMonthImage8" />
 
-            <com.datascrip.salamander_calendar.fonts.GoTextView
+            <com.salamander.salamander_calendar.fonts.GoTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="2dp"
@@ -67,7 +67,7 @@
         android:padding="5dp"
         android:tag="dayOfMonthContainer9">
 
-        <com.datascrip.salamander_calendar.fonts.GoTextView
+        <com.salamander.salamander_calendar.fonts.GoTextView
             android:id="@+id/dayOfMonthText9"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -96,7 +96,7 @@
                 android:src="@drawable/circle_blue"
                 android:tag="dayOfMonthImage9" />
 
-            <com.datascrip.salamander_calendar.fonts.GoTextView
+            <com.salamander.salamander_calendar.fonts.GoTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="2dp"
@@ -117,7 +117,7 @@
         android:padding="5dp"
         android:tag="dayOfMonthContainer10">
 
-        <com.datascrip.salamander_calendar.fonts.GoTextView
+        <com.salamander.salamander_calendar.fonts.GoTextView
             android:id="@+id/dayOfMonthText10"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -146,7 +146,7 @@
                 android:src="@drawable/circle_blue"
                 android:tag="dayOfMonthImage10" />
 
-            <com.datascrip.salamander_calendar.fonts.GoTextView
+            <com.salamander.salamander_calendar.fonts.GoTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="2dp"
@@ -167,7 +167,7 @@
         android:padding="5dp"
         android:tag="dayOfMonthContainer11">
 
-        <com.datascrip.salamander_calendar.fonts.GoTextView
+        <com.salamander.salamander_calendar.fonts.GoTextView
             android:id="@+id/dayOfMonthText11"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -196,7 +196,7 @@
                 android:src="@drawable/circle_blue"
                 android:tag="dayOfMonthImage11" />
 
-            <com.datascrip.salamander_calendar.fonts.GoTextView
+            <com.salamander.salamander_calendar.fonts.GoTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="2dp"
@@ -217,7 +217,7 @@
         android:padding="5dp"
         android:tag="dayOfMonthContainer12">
 
-        <com.datascrip.salamander_calendar.fonts.GoTextView
+        <com.salamander.salamander_calendar.fonts.GoTextView
             android:id="@+id/dayOfMonthText12"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -246,7 +246,7 @@
                 android:src="@drawable/circle_blue"
                 android:tag="dayOfMonthImage12" />
 
-            <com.datascrip.salamander_calendar.fonts.GoTextView
+            <com.salamander.salamander_calendar.fonts.GoTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="2dp"
@@ -267,7 +267,7 @@
         android:padding="5dp"
         android:tag="dayOfMonthContainer13">
 
-        <com.datascrip.salamander_calendar.fonts.GoTextView
+        <com.salamander.salamander_calendar.fonts.GoTextView
             android:id="@+id/dayOfMonthText13"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -296,7 +296,7 @@
                 android:src="@drawable/circle_blue"
                 android:tag="dayOfMonthImage13" />
 
-            <com.datascrip.salamander_calendar.fonts.GoTextView
+            <com.salamander.salamander_calendar.fonts.GoTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="2dp"
@@ -317,7 +317,7 @@
         android:padding="5dp"
         android:tag="dayOfMonthContainer14">
 
-        <com.datascrip.salamander_calendar.fonts.GoTextView
+        <com.salamander.salamander_calendar.fonts.GoTextView
             android:id="@+id/dayOfMonthText14"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

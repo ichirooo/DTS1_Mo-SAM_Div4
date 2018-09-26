@@ -36,21 +36,19 @@ public class KegiatanConverter {
             int checked_in_kegiatan = App.getSession(context).getCheckedInKegiatan();
             for (Kegiatan kegiatan : list_kegiatan) {
                 list_id_kegiatan.remove(Integer.valueOf(kegiatan.getIDServer()));
-                if (checked_in_kegiatan == kegiatan.getIDServer())
-                    kegiatan.setCheckedIn(1);
 
                 Kegiatan localKegiatan = kegiatanSQLite.get(kegiatan.getIDServer());
                 if (localKegiatan != null && localKegiatan.getSalesHeader() != null && (Utils.isEmpty(kegiatan.getSalesHeader().getOrderNo()) || !localKegiatan.getSalesHeader().getOrderNo().toLowerCase().equals(kegiatan.getSalesHeader().getOrderNo().toLowerCase())))
                     new SalesHeaderSQLite(context).deleteFromKegiatan(kegiatan.getIDServer());
 
+                if (kegiatan.isCheckedIn())
+                    App.getSession(context).setCheckedInKegiatan(kegiatan.getIDServer());
                 kegiatanSQLite.Post(kegiatan);
             }
             for (int id_kegiatan : list_id_kegiatan) {
                 Kegiatan kegiatan = kegiatanSQLite.get(id_kegiatan);
-                if (kegiatan.isCheckedIn()) {
-                    kegiatan.setCheckedIn(0);
-                    kegiatanSQLite.Post(kegiatan);
-                }
+                if (kegiatan.isCheckedIn())
+                    App.getSession(context).setCheckedInKegiatan(0);
                 kegiatanSQLite.delete(id_kegiatan);
             }
             RetroData retroData = new RetroData();

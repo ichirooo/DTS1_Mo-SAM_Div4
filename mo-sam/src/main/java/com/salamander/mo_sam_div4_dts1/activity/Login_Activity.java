@@ -19,7 +19,7 @@ import com.salamander.mo_sam_div4_dts1.SessionManager;
 import com.salamander.mo_sam_div4_dts1.custom.TimeOutDialog;
 import com.salamander.mo_sam_div4_dts1.object.User;
 import com.salamander.mo_sam_div4_dts1.proses.Proses_Login;
-import com.salamander.mo_sam_div4_dts1.proses.callback.CallbackLogin;
+import com.salamander.mo_sam_div4_dts1.proses.callback.Callbacks;
 import com.salamander.salamander_base_module.DialogUtils;
 import com.salamander.salamander_logger.LoggingExceptionHandler;
 import com.salamander.salamander_network.RetroStatus;
@@ -72,7 +72,7 @@ public class Login_Activity extends AppCompatActivity {
             Toast.makeText(Login_Activity.this, "Masukkan username & password",
                     Toast.LENGTH_SHORT).show();
         else {
-            new Proses_Login(Login_Activity.this).Login(usr, pas, new CallbackLogin.CBLogin() {
+            new Proses_Login(Login_Activity.this).Login(usr, pas, new Callbacks.OnCBLogin() {
                 @Override
                 public void onCB(RetroStatus retroStatus, User user, String datetime) {
                     if (retroStatus.isSuccess())

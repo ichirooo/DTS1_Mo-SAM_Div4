@@ -28,7 +28,7 @@
 
     <application
         android:name="com.salamander.mo_sam_div4_dts1.App"
-        android:allowBackup="true"
+        android:allowBackup="false"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
@@ -62,12 +62,6 @@
             android:name="com.salamander.mo_sam_div4_dts1.activity.Input_Kegiatan_Activity"
             android:label="@string/title_activity_input_kegiatan"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
-        <activity
-            android:name="com.salamander.mo_sam_div4_dts1.activity.Input_Order_Activity"
-            android:label="@string/title_activity_input_order" />
-        <activity
-            android:name="com.salamander.mo_sam_div4_dts1.activity.Input_Item_Activity"
-            android:label="@string/title_activity_input_item" />
         <activity
             android:name="com.salamander.mo_sam_div4_dts1.activity.customer.Select_Customer_Kegiatan_Activity"
             android:label="@string/select_customer_title" />

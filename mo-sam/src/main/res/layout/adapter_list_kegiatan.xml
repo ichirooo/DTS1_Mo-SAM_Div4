@@ -14,119 +14,169 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="5dp"
-        app:cardElevation="5dp">
+        app:cardElevation="3dp">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/list_item_selector"
-            android:orientation="vertical">
+            android:background="@color/dark_blue">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="5dp"
-                android:gravity="center_vertical"
-                android:orientation="horizontal"
-                android:padding="5dp">
+                android:layout_margin="3dp"
+                android:background="@drawable/list_item_selector"
+                android:orientation="horizontal">
 
-                <TextView
-                    android:id="@+id/tx_tgl_kegiatan"
-                    android:layout_width="0dip"
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_weight="1"
-                    android:text="Date and Time" />
+                    android:orientation="vertical">
 
-                <TextView
-                    android:id="@+id/tx_id_kegiatan"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_marginStart="10dp"
-                    android:gravity="end"
-                    android:text="ID = 40" />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:padding="5dp">
+
+                        <TextView
+                            android:id="@+id/tx_tgl_kegiatan"
+                            android:layout_width="0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:drawablePadding="3dp"
+                            android:drawableStart="@drawable/ic_watch_later_grey_600_18dp"
+                            android:text="Date and Time" />
+
+                        <TextView
+                            android:id="@+id/tx_id_kegiatan"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="10dp"
+                            android:gravity="end"
+                            android:text="ID = 40" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/cardview_shadow_start_color" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:focusable="false"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:id="@+id/ll_kegiatan"
+                            android:layout_width="0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tx_order_no"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="5dp"
+                                android:layout_marginTop="@dimen/dimen_5dp"
+                                android:padding="3dp"
+                                android:text="Order No."
+                                android:textColor="@color/dark_blue"
+                                android:textSize="16sp"
+                                android:textStyle="bold"
+                                android:visibility="gone" />
+
+                            <TextView
+                                android:id="@+id/tx_customer_code"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="5dp"
+                                android:padding="3dp"
+                                android:text="Code"
+                                android:textColor="@color/black"
+                                android:textSize="14sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/tx_customer_name"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="5dp"
+                                android:padding="3dp"
+                                android:text="Customer Name"
+                                android:textColor="@color/black"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:background="@color/cardview_shadow_start_color"
+                                android:visibility="gone" />
+
+                            <TextView
+                                android:id="@+id/tx_customer_city"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="5dp"
+                                android:padding="3dp"
+                                android:text="Customer City"
+                                android:textSize="16sp"
+                                android:textStyle="italic" />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:background="@color/cardview_shadow_start_color" />
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent">
+
+                            <ImageButton
+                                android:id="@+id/bt_check_in"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:background="@drawable/linear_checkin_selector"
+                                android:contentDescription="@string/action_check_in_kegiatan"
+                                android:padding="@dimen/dimen_20dp"
+                                android:scaleType="fitCenter"
+                                android:src="@drawable/ic_exit_to_app_grey_700_24dp" />
+
+                            <ImageButton
+                                android:id="@+id/bt_check_out"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:background="@drawable/linear_checkout_selector"
+                                android:contentDescription="@string/action_check_out_kegiatan"
+                                android:padding="@dimen/dimen_20dp"
+                                android:scaleType="fitCenter"
+                                android:src="@drawable/ic_exit_to_app_grey_700_24dp" />
+
+                        </RelativeLayout>
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/tx_status"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/buttonCheckOutDefault"
+                        android:gravity="end"
+                        android:padding="3dp"
+                        android:text="Status : Canceled"
+                        android:textColor="@color/WHITE"
+                        android:textSize="12sp"
+                        android:textStyle="italic"
+                        android:visibility="gone" />
+                </LinearLayout>
             </LinearLayout>
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="@color/cardview_shadow_start_color" />
-
-            <LinearLayout
-                android:id="@+id/ll_kegiatan"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
-
-                <TextView
-                    android:id="@+id/tx_customer_code"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="5dp"
-                    android:padding="3dp"
-                    android:text="Code"
-                    android:textColor="@color/black"
-                    android:textSize="14sp"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:id="@+id/tx_customer_name"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="5dp"
-                    android:padding="3dp"
-                    android:text="Customer Name"
-                    android:textColor="@color/black"
-                    android:textSize="16sp"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:id="@+id/tx_order_no"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="@dimen/dimen_5dp"
-                    android:layout_marginStart="5dp"
-                    android:layout_marginTop="@dimen/dimen_5dp"
-                    android:padding="3dp"
-                    android:text="Order No."
-                    android:textColor="@color/dark_blue"
-                    android:textSize="16sp"
-                    android:textStyle="bold" />
-
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:background="@color/cardview_shadow_start_color"
-                    android:visibility="gone" />
-
-                <TextView
-                    android:id="@+id/tx_customer_address"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="5dp"
-                    android:padding="3dp"
-                    android:text="Customer Address"
-                    android:textSize="14sp"
-                    android:textStyle="italic"
-                    android:visibility="gone" />
-            </LinearLayout>
-
-            <TextView
-                android:id="@+id/tx_cancel"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@color/dark_red"
-                android:gravity="end"
-                android:paddingBottom="3dp"
-                android:paddingEnd="@dimen/dimen_10dp"
-                android:paddingStart="@dimen/dimen_10dp"
-                android:paddingTop="3dp"
-                android:text="Status : Canceled"
-                android:textColor="@color/WHITE"
-                android:textSize="12sp"
-                android:textStyle="italic"
-                android:visibility="visible" />
         </LinearLayout>
     </android.support.v7.widget.CardView>
 </LinearLayout>

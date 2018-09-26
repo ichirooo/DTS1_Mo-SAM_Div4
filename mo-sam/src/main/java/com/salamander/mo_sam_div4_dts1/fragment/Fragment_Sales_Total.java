@@ -18,7 +18,6 @@ import com.salamander.mo_sam_div4_dts1.R;
 import com.salamander.mo_sam_div4_dts1.activity.order.Input_Sales_Order_Activity;
 import com.salamander.mo_sam_div4_dts1.proses.Proses_Sales_Header;
 import com.salamander.mo_sam_div4_dts1.proses.callback.Callbacks;
-import com.salamander.mo_sam_div4_dts1.sqlite.SalesHeaderSQLite;
 import com.salamander.mo_sam_div4_dts1.util.CurrencyUtils;
 import com.salamander.salamander_base_module.DialogUtils;
 import com.salamander.salamander_base_module.Utils;
@@ -117,7 +116,7 @@ public class Fragment_Sales_Total extends Fragment {
                 if (validasi()) {
                     context.getSalesHeader().setNotes(tx_notes.getText().toString());
                     context.getSalesHeader().setPotongan(CurrencyUtils.getDouble(tx_potongan));
-                    context.setSalesHeader(new SalesHeaderSQLite(context).post(context.getSalesHeader()));
+                    //context.setSalesHeader(new SalesHeaderSQLite(context).post(context.getSalesHeader()));
                     if (context.getSalesHeader() != null) {
                         new Proses_Sales_Header(context, "Sending Order...").post(context.getSalesHeader(), new Callbacks.OnCB() {
                             @Override
@@ -126,8 +125,10 @@ public class Fragment_Sales_Total extends Fragment {
                                     Toast.makeText(context, "Order berhasil disimpan", Toast.LENGTH_SHORT).show();
                                     getActivity().setResult(Activity.RESULT_OK);
                                     getActivity().finish();
-                                } else
+                                } else {
+                                    //new SalesHeaderSQLite(context).delete(context.getSalesHeader().getIDServer());
                                     DialogUtils.showErrorNetwork(context, null, status.getMessage(), false);
+                                }
                             }
                         });
                     }
@@ -149,9 +150,9 @@ public class Fragment_Sales_Total extends Fragment {
             tx_subtotal.setText(CurrencyUtils.formatNumber(context.getSalesHeader().getSubtotal()));
             //tx_potongan.setText("");
             if (context.getSalesHeader().getPotongan() == 0)
-                tx_potongan.append("");
+                tx_potongan.setText("");
             else
-                tx_potongan.append(CurrencyUtils.formatNumber(context.getSalesHeader().getPotongan()));
+                tx_potongan.setText(CurrencyUtils.formatNumber(context.getSalesHeader().getPotongan()));
             tx_dpp.setText(CurrencyUtils.formatNumber(context.getSalesHeader().getDPP()));
             tx_ppn.setText(CurrencyUtils.formatNumber(context.getSalesHeader().getPPnDPP()));
             tx_total_bayar.setText(CurrencyUtils.formatNumber(context.getSalesHeader().getTotal()));

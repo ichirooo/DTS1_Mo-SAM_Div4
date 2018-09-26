@@ -160,8 +160,7 @@ public class KegiatanSQLite {
                 " WHERE " + User.BEX_EMP_NO + " = '" + String.valueOf(App.getUser(context).getEmpNo()) + "'" +
                 " AND " + Kegiatan.KEGIATAN_ID_SERVER + " < " + String.valueOf(TEMP_ID_START) +
                 " AND DATE(" + Kegiatan.KEGIATAN_TGL_MULAI + ") = DATE('" + tanggal + "')" +
-                " ORDER BY " + Kegiatan.KEGIATAN_CHECKED_IN + " DESC," +
-                Kegiatan.KEGIATAN_CANCELED + " ASC," +
+                " ORDER BY " + Kegiatan.KEGIATAN_CANCELED + " ASC," +
                 Kegiatan.KEGIATAN_TGL_MULAI + " DESC," +
                 Kegiatan.KEGIATAN_ID_SERVER + " DESC";
 
@@ -354,63 +353,17 @@ public class KegiatanSQLite {
         return result;
     }
 
-    public void CheckOutAll() {
-        db = dbHelper.getWritableDatabase();
-        String qry = "UPDATE " + ConstSQLite.TABLE_KEGIATAN +
-                " SET " + Kegiatan.KEGIATAN_CHECKED_IN + " = 0 ";
-        db.execSQL(qry);
-        db.close();
-    }
-
-    public void setStatus(ArrayList<Kegiatan> ks) {
-        for (int i = 0; i < ks.size(); i++) {
-            Kegiatan k = get(ks.get(i).getIDServer());
-            if (k != null) {
-                k.setCancel(ks.get(i).getCancel());
-                if (!ks.get(i).getSalesHeader().getOrderNo().equals("null"))
-                    k.getSalesHeader().setOrderNo(ks.get(i).getSalesHeader().getOrderNo());
-                if (ks.get(i).getSalesHeader().getIDServer() != 0)
-                    k.getSalesHeader().setIDServer(ks.get(i).getSalesHeader().getIDServer());
-                if (k.getCancel() == 1)
-                    k.setCancelReason(ks.get(i).getCancelReason());
-                k.getSalesHeader().setStatus(ks.get(i).getSalesHeader().getStatus());
-                Post(k);
-            }
-        }
-    }
-
-    public int getCurrentCheckIn() {
-        db = dbHelper.getReadableDatabase();
-        boolean result = false;
-        String query = "SELECT * FROM " + ConstSQLite.TABLE_KEGIATAN +
-                " WHERE " + User.BEX_EMP_NO + " = " + App.getUser(context).getEmpNo() +
-                " AND " + User.BEX_INITIAL + " = '" + App.getUser(context).getInitial() + "'" +
-                " AND " + Kegiatan.KEGIATAN_CHECKED_IN + " = 1";
-
-        Cursor c = db.rawQuery(query, null);
-        int id = 0;
-        if (c.moveToFirst()) {
-            try {
-                id = c.getInt(c.getColumnIndex(Kegiatan.KEGIATAN_ID_SERVER));
-            } catch (Exception e) {
-                // TODO: handle exception
-                query = e.toString();
-            }
-        } else result = false;
-        db.close();
-        c.close();
-        return id;
-    }
-
     public void checkIn(int id_kegiatan) {
         db = dbHelper.getWritableDatabase();
         String query = "UPDATE " + ConstSQLite.TABLE_KEGIATAN +
-                " SET " + Kegiatan.KEGIATAN_CHECKED_IN + " = 0";
+                " SET " + Kegiatan.KEGIATAN_CHECKED_IN + " = 0" +
+                " WHERE " + User.BEX_EMP_NO + " = " + String.valueOf(App.getUser(context).getEmpNo());
         db.execSQL(query);
         query = "UPDATE " + ConstSQLite.TABLE_KEGIATAN +
                 " SET " + Kegiatan.KEGIATAN_CHECKED_IN + " = 1" +
                 " WHERE " + Kegiatan.KEGIATAN_ID_SERVER + " = " + String.valueOf(id_kegiatan);
         db.execSQL(query);
+        App.getSession(context).setCheckedInKegiatan(id_kegiatan);
     }
 
     public void checkOut(int id_kegiatan) {
@@ -419,11 +372,7 @@ public class KegiatanSQLite {
                 " SET " + Kegiatan.KEGIATAN_CHECKED_IN + " = 0" +
                 " WHERE " + Kegiatan.KEGIATAN_ID_SERVER + " = " + String.valueOf(id_kegiatan);
         db.execSQL(query);
-    }
-
-    public void setCheckIn(Kegiatan kegiatan) {
-        kegiatan.setCheckedIn(Const.CHECK_IN);
-        update(kegiatan);
+        App.getSession(context).setCheckedInKegiatan(0);
     }
 
     public ArrayList<Integer> getAllIDAsArray(String startDate, String endDate) {

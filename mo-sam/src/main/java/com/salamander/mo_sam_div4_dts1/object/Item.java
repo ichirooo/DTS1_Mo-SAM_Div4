@@ -161,9 +161,7 @@ public class Item implements Parcelable {
     }
 
     public double getSubtotal() {
-        if (Subtotal == 0)
-            Subtotal = (getPrice() * getQuantity()) - getDiscountValue();
-        return Subtotal;
+        return (getPrice() * getQuantity()) - getDiscountValue();
     }
 
     public void setSubtotal(double subtotal) {

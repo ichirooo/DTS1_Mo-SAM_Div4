@@ -203,10 +203,18 @@ public class SalesHeaderSQLite {
     }
     */
 
+    public void delete(int idHeader) {
+        new ItemSQLite(context).deleteFromSalesHeader(idHeader);
+        db = dbHelper.getWritableDatabase();
+        String query = "DELETE FROM " + ConstSQLite.TABLE_HEADER +
+                " WHERE " + SalesHeader.SALES_HEADER_ID_SERVER + " = " + String.valueOf(idHeader);
+        db.execSQL(query);
+        db.close();
+    }
+
     public void deleteFromKegiatan(int id_kegiatan) {
-        SalesHeader h = getFromKegiatan(id_kegiatan);
-        for (int i = 0; i < h.getSalesLine().size(); i++)
-            new ItemSQLite(context).deleteFromSalesHeader(h.getSalesLine().get(i).getIDServer());
+        SalesHeader salesHeader = getFromKegiatan(id_kegiatan);
+        new ItemSQLite(context).deleteFromSalesHeader(salesHeader.getIDServer());
         db = dbHelper.getWritableDatabase();
         String query = "DELETE FROM " + ConstSQLite.TABLE_HEADER +
                 " WHERE " + SalesHeader.SALES_HEADER_ID_KEGIATAN + " = " + String.valueOf(id_kegiatan);

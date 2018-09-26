@@ -15,13 +15,13 @@ import android.graphics.Shader;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.os.Build;
+import android.support.v7.widget.AppCompatImageView;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
-import android.widget.ImageView;
 
 import com.salamander.mo_sam_div4_dts1.R;
 
-public class CircularImageView extends ImageView {
+public class CircularImageView extends AppCompatImageView {
     boolean shadowEnabled;
     // Border & Selector configuration variables
     private boolean hasBorder;

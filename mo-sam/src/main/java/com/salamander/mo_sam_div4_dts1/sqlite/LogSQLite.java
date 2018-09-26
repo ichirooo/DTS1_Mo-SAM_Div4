@@ -6,7 +6,6 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.util.Log;
 
-import com.salamander.mo_sam_div4_dts1.function.Waktu;
 import com.salamander.mo_sam_div4_dts1.object.Feedback;
 import com.salamander.mo_sam_div4_dts1.object.Log_Feed;
 import com.salamander.mo_sam_div4_dts1.object.User;
@@ -14,6 +13,7 @@ import com.salamander.salamander_base_module.DateUtils;
 import com.salamander.salamander_base_module.object.Tanggal;
 
 import java.util.ArrayList;
+import java.util.Date;
 
 /**
  * Created by benny_aziz on 03/05/2015.
@@ -37,7 +37,7 @@ public class LogSQLite {
             values.put(ConstSQLite.KEY_LOG_LINE_ID, log.getFeedback().getLineID());
             values.put(ConstSQLite.KEY_LOG_EMPLOYEE_NO, log.getFeedback().getUser().getEmpNo());
             values.put(ConstSQLite.KEY_LOG_NOTE, log.getFeedback().getNote());
-            values.put(ConstSQLite.KEY_LOG_DATETIME, new Waktu().getCurrent());
+            values.put(ConstSQLite.KEY_LOG_DATETIME, new Tanggal(new Date()).getTglString());
 
             db.insert(ConstSQLite.TABLE_LOG, null, values);
             db.close();

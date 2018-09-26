@@ -307,6 +307,7 @@ public class Kegiatan implements Parcelable {
             setKeterangan(JSON.getString(json, KEGIATAN_KETERANGAN));
             setResult(JSON.getString(json, KEGIATAN_KETERANGAN));
             setResultDate(DateUtils.stringToDate(Tanggal.FORMAT_DATETIME_FULL, JSON.getString(json, KEGIATAN_RESULT_DATE)));
+            setCheckedIn(JSON.getInt(json, KEGIATAN_CHECKED_IN));
             setCancel(JSON.getInt(json, KEGIATAN_CANCELED));
             setCancelReason(JSON.getString(json, KEGIATAN_CANCEL_REASON));
             setCancelDate(DateUtils.stringToDate(Tanggal.FORMAT_DATETIME_FULL, JSON.getString(json, KEGIATAN_CANCEL_DATE)));

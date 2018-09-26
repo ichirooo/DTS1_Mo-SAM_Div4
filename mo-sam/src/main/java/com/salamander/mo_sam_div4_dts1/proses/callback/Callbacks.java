@@ -16,6 +16,10 @@ public class Callbacks {
         void onCB(RetroStatus retroStatus);
     }
 
+    public interface OnCBLogin {
+        void onCB(RetroStatus retroStatus, User user, String datetime);
+    }
+
     public interface OnCBKegiatan {
         void onCB(RetroStatus retroStatus, Kegiatan kegiatan);
     }
@@ -54,10 +58,6 @@ public class Callbacks {
 
     public interface onCBCustomers {
         void onCB(RetroStatus status, ArrayList<Customer> list_customer);
-    }
-
-    public interface CBLogin {
-        public void onCB(User user, String datetime);
     }
 
     public interface CBLoadData {

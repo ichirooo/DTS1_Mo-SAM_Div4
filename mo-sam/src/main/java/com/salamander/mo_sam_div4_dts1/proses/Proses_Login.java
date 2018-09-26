@@ -5,7 +5,7 @@ import android.content.Context;
 
 import com.salamander.mo_sam_div4_dts1.App;
 import com.salamander.mo_sam_div4_dts1.object.User;
-import com.salamander.mo_sam_div4_dts1.proses.callback.CallbackLogin;
+import com.salamander.mo_sam_div4_dts1.proses.callback.Callbacks;
 import com.salamander.mo_sam_div4_dts1.proses.interfaces.IC_Kegiatan;
 import com.salamander.salamander_network.JSON;
 import com.salamander.salamander_network.RetroData;
@@ -30,7 +30,7 @@ public class Proses_Login {
         progressDialog.show();
     }
 
-    public void Login(String username, String password, final CallbackLogin.CBLogin CB) {
+    public void Login(String username, String password, final Callbacks.OnCBLogin CB) {
         IC_Kegiatan IC = App.createRetrofit(context).create(IC_Kegiatan.class);
         IC.Login(makeJSON(username, password)).enqueue(new RetroResp.SuccessCallback<ResponseBody>(context) {
             @Override
