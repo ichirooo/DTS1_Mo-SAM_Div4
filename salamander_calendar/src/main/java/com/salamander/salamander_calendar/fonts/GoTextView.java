@@ -101,7 +101,7 @@ public class GoTextView extends AppCompatTextView {
         int typefaceValue = 0;
         if (attrs != null) {
             TypedArray values = context.obtainStyledAttributes(attrs, R.styleable.GoTextView, defStyle, 0);
-            typefaceValue = values.getInt(R.styleable.GoTextView_fontStyle, 0);
+            typefaceValue = values.getInt(R.styleable.GoTextView_font_style, 0);
             values.recycle();
         }
 

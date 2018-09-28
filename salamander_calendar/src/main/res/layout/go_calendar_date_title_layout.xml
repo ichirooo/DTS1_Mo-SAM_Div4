@@ -30,7 +30,7 @@
             android:tag="monthTitle"
             android:text="January"
             android:textSize="@dimen/monthTitleTextSize"
-            custom:fontStyle="bold"
+            custom:font_style="bold"
             custom:monthTitleColor="@color/monthTitleColor" />
 
         <com.salamander.salamander_calendar.fonts.GoTextView
@@ -41,7 +41,7 @@
             android:tag="yearTitle"
             android:text="2016"
             android:textSize="@dimen/yearTitleTextSize"
-            custom:fontStyle="bold"
+            custom:font_style="bold"
             custom:monthTitleColor="@color/monthTitleColor" />
     </LinearLayout>
 

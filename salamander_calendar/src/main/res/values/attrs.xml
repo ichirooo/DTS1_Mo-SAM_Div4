@@ -10,10 +10,10 @@
         <attr name="dayOfMonthFont" format="string" />
     </declare-styleable>
     <declare-styleable name="GoTextView">
-        <attr name="fontStyle" />
+        <attr name="font_style" />
     </declare-styleable>
     <declare-styleable name="Fonts">
-        <attr name="fontStyle" format="enum">
+        <attr name="font_style" format="enum">
             <enum name="regular" value="0" />
             <enum name="bold" value="1" />
             <enum name="italic" value="2" />
